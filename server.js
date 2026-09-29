@@ -4,7 +4,7 @@ const app = express();
 const PORT = process.env.PORT || 5000
 
 const corsOptions = {
-  origin: "https://projeto-simples-front-chi.vercel.app/",
+  origin: "https://projeto-simples-front-chi.vercel.app",
   methods: "GET,POST,PUT,DELETE",
   allowedHeaders: "Content-Type,Authorization",
 };
@@ -12,7 +12,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 app.get("/", (req, res) => {
-  res.json({ message: "API funcionando com CI/CD no Render..." })
+  res.json({ message: "Nova versão publicada automaticamente via GitHub Actions!" })
 })
 
 app.listen(PORT, () => {
